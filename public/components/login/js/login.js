@@ -1,55 +1,35 @@
 
-'use strict';
+import { isEmpty } from "../../../../src/js/helpers/helpers.js";
 
-import { helperController } from "../../../../src/js/helpers/helpers.js";
+const inputUsername = document.getElementById("inputUsername");
+const inputPassword = document.getElementById("inputPassword");
 
-
-const inptUsername = document.getElementById("inputUsername").value;
-const inputPassword = document.getElementById("inputPassword").value;
 const submitBtn = document.getElementById("loginBtn");
 
 
 
-const loginController = {
+ const loginController = {
 
     "getUsers": function(){
         const users = JSON.parse(localStorage.getItem('users'));
         return users;
     },
     "logIn":function(username, password){
-        const users = [...this.getUsers()];   
-        if (helperController.isEmpty(username) || helperController.isEmpty(password)) {
+        const users = [...this.getUsers()];
+        if (isEmpty(username.value) || isEmpty(password.value)) {
             alert("Credenciales invalidas, por favor intente una vez mas.");
-            this.loggedIn(false);
         }else{
-           if (users.map(student=> student.user === username && student.password === pasword).length > 0) {
-               window.location.href("");
-               this.loggedIn(true);
-
+           if (users.some(student => student.user === username.value) && users.some(student => student.password === Number(password.value))) {
+               window.location.replace("../board/board.html");
            } else{
                 alert("Credenciales invalidas, por favor intente una vez mas.");
-                this.loggedIn(false);
            }
         }
-        
+
     },
-    "loggedIn": function(status){
-        if (status === true) {
-            console.log("LOGGEDIN");
-            return "LOGGEDIN";
-        }else{
-            console.log("NOTLOGGEDIN");
-            return "NOTLOGGEDIN";
-        }
-    }
 
 }
 
 submitBtn.addEventListener('click', function(){
-    console.log([inptUsername, inputPassword])
-
-    loginController.logIn(inptUsername, inputPassword);
+    loginController.logIn(inputUsername, inputPassword);
 })
-
-
-
