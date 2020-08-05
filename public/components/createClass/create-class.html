@@ -13,23 +13,6 @@
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
     <!-- Custom styles for this template -->
     <link href="../../../src/assets/cover.css" rel="stylesheet">
   </head>
@@ -45,44 +28,37 @@
     </div>
   </header>
 
-  <h1>Bienvenido al Laboratorio de Fisica</h1>
+  <h1>Crear Clase</h1>
   <br><br>
+  <div id="alerts"></div>
  <div id="mainParent">
-  <div class="row">
-    <div class="col-md-12">
-      <div class="card">
-        <div class="card-header">
-          Class Name
+  <div class="">
+    <form>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Nombre de la Clase</label>
+          <input type="text" class="form-control" id="inputClassName">
         </div>
-        <div class="card-body">
-          <h5 class="card-title">Teacher's name</h5>
-          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-          <a href="#" class="btn btn-primary">Abrir Simulación</a>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Profesor</label>
+            <input type="text" class="form-control" id="inputTeacherName">
+          </div>
+        <div class="form-group">
+          <label for="exampleFormControlSelect1">Simulaciones</label>
+          <select class="form-control" id="inputSimulationSelect">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
         </div>
-      </div>
-    </div>
-</div>
-<div class="row">
-  <div class="col-md-12">
-    <br>
-    <hr style="background-color: aliceblue;">
-    <br>
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">Instrucciones y/o descripciones </label>
+          <textarea class="form-control" id="inputDescription" rows="3"></textarea>
+        </div>
+      </form>
+      <button type="button" class="btn btn-outline-light btn-lg btn-block" id="saveButton">Guardar y Publicar Clase</button>
   </div>
-</div>
-<div class="row">
-  <div class="col-md-12">
-    <div class="card">
-      <div class="card-header">
-        Class Name
-      </div>
-      <div class="card-body">
-        <h5 class="card-title">Teacher's name</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Abrir Simulación</a>
-      </div>
-    </div>
-  </div>
-</div>
  </div>
 
   <footer class="mastfoot mt-auto">
