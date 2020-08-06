@@ -1,6 +1,5 @@
 'use strict';
 
-
 (function setUsers(){
     const students = [
         {'user':"estudiante1", "password":12345},
@@ -16,7 +15,7 @@
     ];
     const teachers = [ 
         {'user':"maestro1", "password":"maestro12345"},
-    ]
+    ];
 
     const users = [...students, ...teachers];
     

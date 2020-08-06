@@ -1,22 +1,18 @@
 "use strict";
+import { getAllStoraged } from '../../../src/js/helpers/helpers.js';
 
 
 function getClasses(){
-   // const classes = localStorage.getItem('Clases');
-    const classes = [
-        {
-        "title":"Class",
-        "teacher":"teachername",
-        "description":"With supporting text below as a natural lead-in to additional content.",
-        "simulationLink":""
-         }
-    ]
-    return classes;
+   
+    const classes = JSON.parse(getAllStoraged());
+
+    return [ classes ];
 };
 
 (function bindUI(){
     const parentElement = document.getElementById("mainParent");
     const classes = getClasses();
+    console.log(classes);
 
     classes.forEach(function(element){
         parentElement.innerHTML = `
@@ -42,6 +38,6 @@ function getClasses(){
       </div>
     </div>
         `;
-    })
+    });
     
 })();

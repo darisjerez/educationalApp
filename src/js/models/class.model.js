@@ -1,5 +1,5 @@
 export let classModel = {
-    "id":0,
+    "id":"",
     "title":"",
     "teacher":"",
     "description":"",
