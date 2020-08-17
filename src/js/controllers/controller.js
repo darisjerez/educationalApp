@@ -22,3 +22,7 @@
     localStorage.setItem('users', JSON.stringify(users));
 })();
 
+(function setSimulations(){
+    const simulations = [{name: "Adición de Vectores", link: ""}]
+})();
+

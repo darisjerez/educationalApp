@@ -20,7 +20,7 @@ const submitBtn = document.getElementById("loginBtn");
             alert("Credenciales invalidas, por favor intente una vez mas.");
         }else{
            if (users.some(student => student.user === username.value) && users.some(student => student.password === Number(password.value))) {
-               window.location.replace("../board/board.html");
+               window.location.replace("../board/index.html");
            } else{
                 alert("Credenciales invalidas, por favor intente una vez mas.");
            }

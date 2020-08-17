@@ -1,9 +1,11 @@
 export let classModel = {
-    "id":"",
     "title":"",
-    "teacher":"",
     "description":"",
-    "simulationLink":""
+    "teacherName":"",
+    "simulationName": "",
+    "simulationLink":"",
+    "expiration":"",
+    "creation":""
 };
 
 // export class Class {

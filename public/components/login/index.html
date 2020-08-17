@@ -4,9 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Jekyll v4.0.1">
-    <title>Cover Template · Bootstrap</title>
+    <title>LabNet · Acceder</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/cover/">
 
@@ -35,24 +33,6 @@
         <link rel="stylesheet" type="text/css" href="css/main.css">
     <!--===============================================================================================-->
 
-
-  
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
     <!-- Custom styles for this template -->
     <link href="../../../src/assets/cover.css" rel="stylesheet">
   </head>
@@ -60,20 +40,25 @@
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
   <header class="masthead mb-auto">
     <div class="inner">
-      <h3 class="masthead-brand">Educational App</h3>
+      <h3 class="masthead-brand">LabNet
+         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-pencil" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M11.293 1.293a1 1 0 0 1 1.414 0l2 2a1 1 0 0 1 0 1.414l-9 9a1 1 0 0 1-.39.242l-3 1a1 1 0 0 1-1.266-1.265l1-3a1 1 0 0 1 .242-.391l9-9zM12 2l2 2-9 9-3 1 1-3 9-9z"/>
+        <path fill-rule="evenodd" d="M12.146 6.354l-2.5-2.5.708-.708 2.5 2.5-.707.708zM3 10v.5a.5.5 0 0 0 .5.5H4v.5a.5.5 0 0 0 .5.5H5v.5a.5.5 0 0 0 .5.5H6v-1.5a.5.5 0 0 0-.5-.5H5v-.5a.5.5 0 0 0-.5-.5H3z"/>
+      </svg>
+    </h3>
       <nav class="nav nav-masthead justify-content-center">
-        <a class="nav-link" href="../index.html">Home</a>
-        <a class="nav-link active" href="./login/login.html">Acceder</a>
-        <a class="nav-link" href="#">Acerca</a>
+        <a class="nav-link" href="../../../index.html">Home</a>
+        <a class="nav-link active" href="./login/index.html">Acceder</a>
       </nav>
     </div>
   </header>
 
   <main role="main" class="inner cover">
-    <div class="wrap-login100">
+    <div class="row">
+      <div class="wrap-login100 col-md-11 offset-md-1 col-sm-12">
         <form>
             <span class="login100-form-logo">
-                <i class="zmdi zmdi-landscape"></i>
+              <i class="zmdi zmdi-account-o"></i>
             </span>
 
             <span class="login100-form-title p-b-34 p-t-27">
@@ -81,23 +66,27 @@
             </span>
 
             <div class="wrap-input100 validate-input" data-validate = "Enter username">
-                <input class="input100" type="text" name="username" placeholder="Username" id="inputUsername">
+                <input class="input100" type="text" name="username" placeholder="Usuario" id="inputUsername">
                 <span class="focus-input100" data-placeholder="&#xf207;"></span>
             </div>
 
             <div class="wrap-input100 validate-input" data-validate="Enter password">
-                <input class="input100" type="password" name="pass" placeholder="Password" id="inputPassword">
+                <input class="input100" type="password" name="pass" placeholder="Contraseña" id="inputPassword">
                 <span class="focus-input100" data-placeholder="&#xf191;"></span>
             </div>
 
             
             </div>
         </form>
-        <div class="">
-          <button id="loginBtn" class="login100-form-btn">
-              Login
-          </button>
     </div>
+    <div class="row">
+      <div class="offset-md-5 col-md-2">
+        <button id="loginBtn" class="btn btn-outline-warning">
+            Acceder
+        </button>
+     </div>
+    </div>
+ 
   </main>
 
 

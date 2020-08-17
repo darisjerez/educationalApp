@@ -26,7 +26,7 @@ a:hover {
 
 html,
 body {
-  background-image: url('../assets/img/backgroundOtherPages.jpg');
+  background-image: url('./src/assets/img/backgroundLandingPage.jpg');
       /* Add the blur effect */
     
     
@@ -72,7 +72,7 @@ body {
 
 .nav-masthead .nav-link:hover,
 .nav-masthead .nav-link:focus {
-  border-bottom-color: white
+  border-bottom-color: #FFC107;
 }
 
 .nav-masthead .nav-link + .nav-link {
@@ -111,4 +111,5 @@ body {
  */
 .mastfoot {
   color: rgba(255, 255, 255, .5);
+  background-image: url('../assets/img/backgroundOtherPages.jpg');
 }
