@@ -1,10 +1,10 @@
 "use strict";
 
-import { apiRest, emptyParentContainer, isEmpty, formatDate } from '../../../src/js/helpers/helpers.js';
+import { apiRest, emptyParentContainer, isEmpty, formatDate, getUser } from '../../../src/js/helpers/helpers.js';
 
 var classes = [];
 var classesBySearch;
-var errors = [];
+
 const searchBox = document.getElementById("inputSearchBox");
 const searchButton = document.getElementById("searchButton");
 const parentElement = document.getElementById("mainParent");
@@ -24,7 +24,6 @@ async function getClassesBySearch(){
      await dataManagableForUser.then(
       data => classesBySearch = data
     )
-    console.log(classesBySearch)
     }else{
       let errorMessage = await dataManagableForUser;
       emptyParentContainer(parentElement)
@@ -72,7 +71,7 @@ async function bindUI(){
                   <p class="card-text" style="color: black;"> <strong>Vencimento</strong>: </p>
                   <p class="card-text" style="color: black;"> ${formatDate(element.expiration)}</p>
                   <hr>
-                  <a href="../simulations/?${element._id}?${element.simulationLink}" class="btn btn-warning">Abrir Simulación</a>
+                  <a href="../simulations/?${element._id}" class="btn btn-warning">Abrir Simulación</a>
                 </div>
                 </div>
             </div>
@@ -113,7 +112,7 @@ function bindUIForSearch(){
                   <p class="card-text" style="color: black;"> <strong>Vencimento</strong>: </p>
                   <p class="card-text" style="color: black;"> ${formatDate(element.expiration)}</p>
                   <hr>
-                  <a href="../simulations/?${element.id}?${element.simulationLink}" class="btn btn-warning">Abrir Simulación</a>
+                  <a href="../simulations/?${element.id}" class="btn btn-warning">Abrir Simulación</a>
                 </div>
                 </div>
             </div>
@@ -133,7 +132,20 @@ function bindUIForSearch(){
 
 document.load = bindUI();
 
+if(getUser() != "maestro1"){
+  let elementDisabled = document.getElementById('createClass');
 
+  elementDisabled.style.display = "none";
+}
+
+document.getElementById("searchForm").addEventListener('submit', (e)=>{
+  e.preventDefault();
+
+})
+
+DocumentType.getElementById("logout").addEventListener('click', ()=>{
+  unlinkUser();
+})
 searchButton.addEventListener('click', async(e)=>{
      e.preventDefault();
     if(isEmpty(searchBox.value)){

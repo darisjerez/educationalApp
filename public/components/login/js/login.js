@@ -1,5 +1,5 @@
 
-import { isEmpty } from "../../../../src/js/helpers/helpers.js";
+import { isEmpty, linkUser } from "../../../../src/js/helpers/helpers.js";
 
 const inputUsername = document.getElementById("inputUsername");
 const inputPassword = document.getElementById("inputPassword");
@@ -20,6 +20,7 @@ const submitBtn = document.getElementById("loginBtn");
             alert("Credenciales invalidas, por favor intente una vez mas.");
         }else{
            if (users.some(student => student.user === username.value) && users.some(student => student.password === Number(password.value))) {
+                linkUser(username.value);
                window.location.replace("../board/index.html");
            } else{
                 alert("Credenciales invalidas, por favor intente una vez mas.");

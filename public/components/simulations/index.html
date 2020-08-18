@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
     
-
+    <script src="../../../src/js/helpers/loginChecker.js" type="module"></script>
     <!-- Custom styles for this template -->
     <link href="../../../src/assets/cover.css" rel="stylesheet">
   </head>
@@ -26,14 +26,19 @@
    </h3>
       <nav class="nav nav-masthead justify-content-center">
         <a class="nav-link active" href="#">Simulación</a>
-        <a class="nav-link" href="../../../index.html">Salir</a>
+        <a class="nav-link" href="../board/">Volver</a>
+        <a class="nav-link" id="logout" href="../../../index.html">Salir</a>
       </nav>
     </div>
   </header>
+    <div id="errors">
 
+    </div>
   <!-- <div class="row"> -->
-    <div id="simulationContainer" >
+    <div class="row">
+      <div id="simulationContainer" class="col-md-12">
     
+      </div>
     </div>
     <br>
     <button type="button" class="btn btn-outline-warning" data-toggle="modal" data-target="#exampleModal">
@@ -68,7 +73,9 @@
                     <li>Estas opciones son accesible a traves del icono en la esquina inferior derecha.</li>
                   </ul>
                 </div>
-                  <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">...</div>
+                  <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
+                    
+                  </div>
                 </div>
               </div>
             </div>

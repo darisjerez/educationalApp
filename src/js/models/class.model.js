@@ -4,6 +4,7 @@ export let classModel = {
     "teacherName":"",
     "simulationName": "",
     "simulationLink":"",
+    "teacherEmail": "",
     "expiration":"",
     "creation":""
 };

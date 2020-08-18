@@ -8,6 +8,7 @@ const inputTeacherName = document.getElementById("inputTeacherName");
 const inputDescription = document.getElementById("inputDescription");
 const inputSimulation = document.getElementById("inputSimulationSelect");
 const inputExpirationDate = document.getElementById("inputExpirationDate");
+const inputTeacherEmail = document.getElementById("inputTeacherEmail");
 const saveButton = document.getElementById("saveButton");
 
 async function saveIntoDB(data){
@@ -45,6 +46,7 @@ function saveClass(){
             classModel.simulationName = inputSimulation.value;
             classModel.simulationLink = simulationIdentifier();
             classModel.expiration = inputExpirationDate.value;
+            classModel.teacherEmail = inputTeacherEmail.value;
             classModel.creation = new Date().toISOString();
             saveIntoDB(classModel);
         }
