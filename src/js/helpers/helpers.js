@@ -31,7 +31,7 @@ export function formattedDateAsID(){
 }
 
 export const apiRest = {
-    "url": "http://localhost:3000/class"
+    "url": "https://class-nestjs.herokuapp.com/class"
 };
 
 export function showErrors(errorMsg, elementID){
@@ -59,4 +59,9 @@ export function emptyParentContainer(element){
 export function formatDate(stringDate){
     let newDate = stringDate.slice(0,10);
     return newDate.split("-").reverse().join("-");
+}
+
+export function truncateText(text){
+    const textTrucated = text.slice(0, 64);
+    return `${textTrucated}...`
 }

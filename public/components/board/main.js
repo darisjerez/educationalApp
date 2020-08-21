@@ -1,6 +1,6 @@
 "use strict";
 
-import { apiRest, emptyParentContainer, isEmpty, formatDate, getUser } from '../../../src/js/helpers/helpers.js';
+import { apiRest, emptyParentContainer, isEmpty, formatDate, getUser, truncateText } from '../../../src/js/helpers/helpers.js';
 
 var classes = [];
 var classesBySearch;
@@ -65,7 +65,7 @@ async function bindUI(){
                 <p class="card-text" style="color: black;"> <strong>Simulación</strong>: </p>
                   <p class="card-text" style="color: black;"> ${element.simulationName}</p>
                   <p class="card-text" style="color: black;"> <strong>Descripción</strong>: </p>
-                  <p class="card-text" style="color: black;"> ${element.description}</p>
+                  <p class="card-text" style="color: black;"> ${truncateText(element.description)}</p>
                   <p class="card-text" style="color: black;"> <strong>Profesor</strong>: </p>
                   <p class="card-text" style="color: black;"> ${element.teacherName}</p>
                   <p class="card-text" style="color: black;"> <strong>Vencimento</strong>: </p>
@@ -106,7 +106,7 @@ function bindUIForSearch(){
                 <p class="card-text" style="color: black;"> <strong>Simulación</strong>: </p>
                   <p class="card-text" style="color: black;"> ${element.simulationName}</p>
                   <p class="card-text" style="color: black;"> <strong>Descripción</strong>: </p>
-                  <p class="card-text" style="color: black;"> ${element.description}</p>
+                  <p class="card-text" style="color: black;"> ${truncateText(element.description)}</p>
                   <p class="card-text" style="color: black;"> <strong>Profesor</strong>: </p>
                   <p class="card-text" style="color: black;"> ${element.teacherName}</p>
                   <p class="card-text" style="color: black;"> <strong>Vencimento</strong>: </p>
@@ -143,7 +143,7 @@ document.getElementById("searchForm").addEventListener('submit', (e)=>{
 
 })
 
-DocumentType.getElementById("logout").addEventListener('click', ()=>{
+document.getElementById("logout").addEventListener('click', ()=>{
   unlinkUser();
 })
 searchButton.addEventListener('click', async(e)=>{
